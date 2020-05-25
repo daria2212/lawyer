@@ -1,0 +1,151 @@
+.main-nav {
+    position: absolute;
+    height: 597px;
+    top: -30px;
+    right: -20px;
+    z-index: 5;
+    background-color: $blue;
+    &--closed {
+        display: none;
+    }
+
+    &--opened {
+        display: block;
+        animation: slideInLeft 0.5s;
+    }
+
+    &--no-js {
+        display: block;
+        position: static;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        visibility: visible;
+    }
+
+    to {
+        -webkit-transform: translateX(0);
+        transform: translate3d(0);
+    }
+}
+
+.main-nav__list {
+    @include reset-style;
+    padding: 85px 62px 0 20px;
+}
+
+.main-nav__item {
+    margin-bottom: 28px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.main-nav__link {
+    display: block;
+    @include bigger-text;
+    color: $light;
+}
+
+.toggle {
+    position: absolute;
+    top: 22px;
+    right: 0px;
+    font-size: 0;
+}
+
+.toggle--opened {
+    top: -7px;
+    right: 14px;
+    padding: 0;
+    width: 28px;
+    height: 30px;
+    font-size: 0;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    z-index: 6;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 28px;
+        width: 2px;
+        height: 28px;
+        background-color: #fffff3;
+        border-radius: 5px;
+    }
+    &:before {
+        transform: rotate(-45deg);
+    }
+    &:after {
+        transform: rotate(45deg);
+    }
+}
+
+.toggle--closed {
+    padding: 0;
+    width: 32px;
+    height: 2px;
+    font-size: 0;
+    border: 0;
+    outline: 0;
+    background-color: $light;
+    border-radius: 5px;
+    &:before,
+    &:after {
+        position: absolute;
+        content: "";
+        right: 0;
+        width: inherit;
+        height: inherit;
+        background-color: inherit;
+        transition: all ease 0.3s;
+        border-radius: 5px;
+    }
+    &:before {
+        top: -9px;
+    }
+    &:after {
+        top: 9px;
+    }
+}
+
+.toggle--no-js {
+    display: none;
+}
+
+@media (min-width: $tablet-big-width) {
+    .main-nav {
+        display: flex;
+        align-items: center;
+        position: unset;
+        height: unset;
+        background-color: transparent;
+    }
+    .main-nav__list {
+        display: flex;
+        padding: 0;
+    }
+    .main-nav__item {
+        margin-right: 52px;
+        margin-bottom: 0;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    .main-nav__link {
+        @include title;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .toggle {
+        display: none;
+    }
+}
