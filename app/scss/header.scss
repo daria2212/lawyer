@@ -46,6 +46,8 @@
 @media (min-width: $tablet-width) {
     .main-header {
         &__top {
+            display: flex;
+            justify-content: space-between;
             margin-bottom: 60px;
         }
         &__inner {
@@ -84,8 +86,6 @@
         background-repeat: no-repeat;
         background-size: cover;
         &__top {
-            display: flex;
-            justify-content: space-between;
             margin-bottom: 80px;
         }
         &__content {
