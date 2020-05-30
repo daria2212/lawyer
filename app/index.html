@@ -192,7 +192,7 @@
                                     </svg>
                                 </div>
                                 <div class="services-item__content">
-                                    <h3 class="services-item__title">Взыскание задолженности 
+                                    <h3 class="services-item__title">Взыскание задолженности
                                         и алиментов</h3>
                                     <p class="services-item__text">Решаю сложный и неприятный вопрос: “Как взыскать
                                         долги?”</p>
@@ -226,7 +226,8 @@
                                 </div>
                                 <div class="services-item__content">
                                     <h3 class="services-item__title">Споры с государственными органами</h3>
-                                    <p class="services-item__text">Оспариваю результаты проверки, привлекаю к ответственности</p>
+                                    <p class="services-item__text">Оспариваю результаты проверки, привлекаю к
+                                        ответственности</p>
                                 </div>
                             </div>
                         </a>
@@ -258,7 +259,7 @@
                                     </svg>
                                 </div>
                                 <div class="services-item__content">
-                                    <h3 class="services-item__title">Взыскание задолженности 
+                                    <h3 class="services-item__title">Взыскание задолженности
                                         и алиментов</h3>
                                     <p class="services-item__text">Решаю сложный и неприятный вопрос: “Как взыскать
                                         долги?”</p>
@@ -292,7 +293,8 @@
                                 </div>
                                 <div class="services-item__content">
                                     <h3 class="services-item__title">Споры с государственными органами</h3>
-                                    <p class="services-item__text">Оспариваю результаты проверки, привлекаю к ответственности</p>
+                                    <p class="services-item__text">Оспариваю результаты проверки, привлекаю к
+                                        ответственности</p>
                                 </div>
                             </div>
                         </a>
@@ -324,7 +326,7 @@
                                     </svg>
                                 </div>
                                 <div class="services-item__content">
-                                    <h3 class="services-item__title">Взыскание задолженности 
+                                    <h3 class="services-item__title">Взыскание задолженности
                                         и алиментов</h3>
                                     <p class="services-item__text">Решаю сложный и неприятный вопрос: “Как взыскать
                                         долги?”</p>
@@ -358,7 +360,8 @@
                                 </div>
                                 <div class="services-item__content">
                                     <h3 class="services-item__title">Споры с государственными органами</h3>
-                                    <p class="services-item__text">Оспариваю результаты проверки, привлекаю к ответственности</p>
+                                    <p class="services-item__text">Оспариваю результаты проверки, привлекаю к
+                                        ответственности</p>
                                 </div>
                             </div>
                         </a>
@@ -374,7 +377,8 @@
                     <p class="about__text">Меня зовут Руслан Макаров. Я адвокат
                         и специализируюсь на гражданских
                         и арбитражных судебных делах.</p>
-                    <p class="about__text">Моя цель - помочь разобраться в сложной судебной бюрократии, созданной законодальством РФ. Для этого я также веду свой блог, где разбираю часто встречающиеся кейсы.
+                    <p class="about__text">Моя цель - помочь разобраться в сложной судебной бюрократии, созданной
+                        законодальством РФ. Для этого я также веду свой блог, где разбираю часто встречающиеся кейсы.
                     </p>
                 </div>
                 <ul class="about__list">
@@ -387,7 +391,7 @@
                         <h3 class="about-item__title">Инициатива</h3>
                         <p class="about-item__text">Предлагаю эффективные способы
                             решения проблемы при возникновении
-                           неожиданных юридических ситуаций</p>
+                            неожиданных юридических ситуаций</p>
                     </li>
                     <li class="about__item about-item">
                         <div class="about-item__img">
@@ -408,11 +412,46 @@
                         </div>
                         <h3 class="about-item__title">Эффективность</h3>
                         <p class="about-item__text">Ориентируюсь на результат, так как
-                        это главный показатель
-                        эффективности моей работы</p>
+                            это главный показатель
+                            эффективности моей работы</p>
                     </li>
-                </ul>       
+                </ul>
             </div>
+        </section>
+
+        <section class="consultation">
+                <h2 class="consultation__title title">Заказать консультацию</h2>
+                <form class="consultation__form form" action="mail.php" method="POST">
+                    <div class="form__inner">
+                        <p class="form__text">Вы можете описать свой вопрос,
+                            и я свяжусь с Вами в ближайшее время</p>
+                        <div class="form__fields">
+                            <!-- Hidden Required Fields -->
+                            <input class="visually-hidden" type="hidden" name="website" value="lawyer">
+                            <input class="visually-hidden" type="hidden" name="admin_email"
+                                value="dariaweb.pro@gmail.com">
+                            <input class="visually-hidden" type="hidden" name="form_subject"
+                                value="Сообщение с сайта - Форма на странице">
+                            <!-- END Hidden Required Fields -->
+                            <div class="form__inputs">
+                                <input class="form__input" type="text" name="user-name" id="user-name" required
+                                    placeholder="Имя">
+                                <label class="form__label" for="user-name"></label>
+                                <input class="form__input" type="tel" name="phone" id="phone" required
+                                    placeholder="Телефон">
+                                <label class="form__label" for="phone"></label>
+                                <input class="form__input" type="email" name="email" id="email" required
+                                    placeholder="E-mail">
+                                <label class="form__label" for="email"></label>
+                            </div>
+                            <textarea class="form__textarea" name="question" id="question" rows="8"
+                                placeholder="Вопрос"></textarea>
+                            <label class="form__label" for="question"></label>
+                        </div>
+                        <button class="form__button button button--transparent" type="submit">Получить
+                            консультацию</button>
+                    </div>
+                </form>
         </section>
 
     </main>

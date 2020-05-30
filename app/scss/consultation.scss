@@ -1,0 +1,125 @@
+.consultation {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 45px 0 45px 20px;
+    &__title {
+        margin-bottom: 30px;
+        &:before {
+            background-color: $light;
+        }
+    }
+}
+
+.form {
+    padding: 32px 25px 50px 25px;
+    background-color: $blue;
+    border-radius: 15px 0px 0px 15px;
+    &__text {
+        margin-bottom: 13px;
+        @include small-text;
+        white-space: pre-line;
+    }
+    &__input,
+    &__textarea {
+        padding: 10px 0 10px;
+        width: 100%;
+        color: $light;
+        background-color: transparent;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid $light;
+        text-indent: 10px;
+        &::placeholder {
+            text-indent: 0;
+            @include standart-text;
+            color: $light;
+        }
+        &:active,
+        &:focus {
+            background-color: transparent;
+            &::placeholder {
+                color: transparent;
+            }
+        }
+    }
+    &__input {
+        margin-bottom: 20px;
+    }
+    &__textarea {
+        margin-bottom: 40px;
+    }
+    &__button {
+        color: $light;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .consultation {
+        padding: 45px 0 50px 30px;
+    }
+    .form {
+        &__fields {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+        &__textarea {
+            margin-bottom: 20px;
+            padding-bottom: 2px;
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .consultation {
+        padding: 45px 0 50px 100px;
+        &__title {
+            margin-bottom: 40px;
+        }
+    }
+    .form {
+        padding-top: 25px;
+        padding-bottom: 0px;
+        &__inner {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            position: relative;
+        }
+        &__text {
+            position: relative;
+            top: 25px;
+        }
+        &__button {
+            position: absolute;
+            left: 0px;
+            bottom: 55px;
+        }
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .consultation {
+        &__title {
+            max-width: 1080px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+    }
+    .form {
+        display: flex;
+        justify-content: center;
+        max-width: 1920px;
+        &__inner {
+            max-width: 1080px;
+            grid-gap: 80px;
+        }
+        &__text {
+            @include bigger-text;
+        }
+        &__button {
+            width: 240px;
+        }
+    }
+}
