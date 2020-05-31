@@ -1,5 +1,5 @@
-var menuBtn = document.querySelector('.toggle');
-var menu = document.querySelector('.main-nav');
+let menuBtn = document.querySelector('.toggle');
+let menu = document.querySelector('.main-nav');
 
 menuBtn.classList.remove('toggle--no-js');
 menu.classList.remove('main-nav--no-js');
@@ -47,4 +47,36 @@ $(function () {
             }
         ]
     });
+});
+
+//  Script for modal
+
+let connectLink = document.querySelector('.main-header__button');
+let popup = document.querySelector('.modal');
+let overlay = document.querySelector('.modal-overlay');
+let close = document.querySelector('.modal__close');
+
+connectLink.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    popup.classList.add('modal-show');
+    overlay.classList.add('overlay-show');
+});
+
+close.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    popup.classList.remove('modal-show');
+    overlay.classList.remove('overlay-show');
+})
+
+overlay.addEventListener('click', function () {
+    popup.classList.remove('modal-show');
+    overlay.classList.remove('overlay-show');
+});
+
+window.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+        evt.preventDefault();
+        popup.classList.remove('modal-show');
+        overlay.classList.remove('overlay-show');
+    }
 });
