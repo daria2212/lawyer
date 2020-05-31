@@ -201,7 +201,7 @@
                         <a href="court-order.html" class="services-item__link">
                             <div class="services-item__inner">
                                 <div class="services-item__img">
-                                    <svg width="60" height=60">
+                                    <svg width="60" height="60">
                                         <use xlink:href="#service-3"></use>
                                     </svg>
                                 </div>
@@ -268,7 +268,7 @@
                         <a href="court-order.html" class="services-item__link">
                             <div class="services-item__inner">
                                 <div class="services-item__img">
-                                    <svg width="60" height=60">
+                                    <svg width="60" height="60">
                                         <use xlink:href="#service-3"></use>
                                     </svg>
                                 </div>
@@ -335,7 +335,7 @@
                         <a href="court-order.html" class="services-item__link">
                             <div class="services-item__inner">
                                 <div class="services-item__img">
-                                    <svg width="60" height=60">
+                                    <svg width="60" height="60">
                                         <use xlink:href="#service-3"></use>
                                     </svg>
                                 </div>
@@ -482,28 +482,28 @@
                 <ul class="social__list">
                     <li class="social__item social-item">
                         <a href="#" class="social-item__link">Телеграм
-                            <svg width="28" height=28">
+                            <svg width="28" height="28">
                                 <use xlink:href="#telegram"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="social__item social-item">
                         <a href="#" class="social-item__link">Твиттер
-                            <svg width="28" height=28">
+                            <svg width="28" height="28">
                                 <use xlink:href="#twitter"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="social__item social-item">
                         <a href="#" class="social-item__link">Инстаграм
-                            <svg width="28" height=28">
+                            <svg width="28" height="28">
                                 <use xlink:href="#insta"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="social__item social-item">
                         <a href="#" class="social-item__link">Вконтакте
-                            <svg width="28" height=28">
+                            <svg width="28" height="28">
                                 <use xlink:href="#vk"></use>
                             </svg>
                         </a>
@@ -536,6 +536,42 @@
         </div>
     </footer>
 
+    <section class="modal">
+        <h2 class=" visually-hidden modal__title">Форма для связи</h2>
+        <form class="modal__form modal-form form" action="mail.php" method="POST">
+            <div class="modal-form__inner">
+                <p class="modal-form__text form__text">Опишите свой вопрос ниже, и я свяжусь
+                    с Вами в течение нескольких часов</p>
+                <div class="modal-form__fields">
+                    <!-- Hidden Required Fields -->
+                    <input class="visually-hidden" type="hidden" name="website" value="lawyer">
+                    <input class="visually-hidden" type="hidden" name="admin_email" value="dariaweb.pro@gmail.com">
+                    <input class="visually-hidden" type="hidden" name="form_subject"
+                        value="Сообщение с сайта - Форма на странице">
+                    <!-- END Hidden Required Fields -->
+                    <div class="modal-form__inputs">
+                        <input class="modal-form__input form__input" type="text" name="modal-user-name"
+                            id="modal-user-name" required placeholder="Имя">
+                        <label class="modal-form__label form__label" for="modal-user-name"></label>
+                        <input class="modal-form__input form__input" type="tel" name="modal-phone" id="modal-phone"
+                            required placeholder="Телефон">
+                        <label class="modal-form__label form__label" for="modal-phone"></label>
+                        <input class="modal-form__input form__input" type="email" name="modal-email" id="modal-email"
+                            required placeholder="E-mail">
+                        <label class="modal-form__label form__label" for="modal-email"></label>
+                    </div>
+                    <textarea class="modal-form__textarea form__textarea" name="modal-question" id="modal-question"
+                        rows="8" placeholder="Вопрос"></textarea>
+                    <label class="modal-form__label form__label" for="modal-question"></label>
+                </div>
+                <button class="modal-form__button form__button button button--transparent" type="submit">Получить
+                    консультацию</button>
+            </div>
+        </form>
+        <button class="modal__close" type="button">Закрыть</button>
+    </section>
+
+    <div class="modal-overlay"></div>
 
 
 
