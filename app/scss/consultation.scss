@@ -36,6 +36,8 @@
         }
         &:active,
         &:focus {
+            outline: 1px solid $light;
+            border-bottom: unset;
             background-color: transparent;
             &::placeholder {
                 color: transparent;

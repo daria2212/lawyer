@@ -54,10 +54,20 @@ ul,h1,h2,h3,h4,h5,h6,p {
     line-height: 18px;
     color: $light;
     background-color: $blue;
+    &:hover {
+      color: $blue;
+      background-color: $light;
+      transition: .7s;
+    }
   }
   &--transparent {
     padding: 10px 18px;
     border: 1px solid $light;
+    &:hover {
+      color: $blue;
+      background-color: $light;
+      transition: .7s;
+    }
   }
 }
 

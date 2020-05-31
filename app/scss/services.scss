@@ -53,6 +53,21 @@
         font-size: calc(11px + 16 * ((100vw - 320px) / (1280 - 320)));
         line-height: 120%;
     }
+    &:hover {
+        .services-item__link {
+            background-color: $light;
+            transition: .6s;
+        }
+        .services-item__inner {
+            color: $blue;
+            border: 1px solid $blue;
+            transition: .6s;
+            svg {
+                fill: $blue;
+                transition: .6s;
+            }
+        }
+    }
 }
 
 .services-dots {

@@ -28,6 +28,12 @@
             height: 28px;
             fill: $light;
         }
+        &:hover {
+            svg {
+                opacity: .5;
+                transition: .6s;
+            }
+        }
     }
 }
 
@@ -38,6 +44,11 @@
         margin-bottom: 8px;
         &:last-child {
             margin-bottom: 0;
+        }
+        &:hover {
+            a {
+                text-decoration: underline;
+            }
         }
     }
 }
