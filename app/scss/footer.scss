@@ -1,0 +1,122 @@
+.footer {
+    padding: 20px 0 16px;
+    text-align: center;
+    &__copy {
+        @include small-text;
+    }
+}
+
+.social {
+    margin-bottom: 44px;
+    &__title {
+        margin-bottom: 14px;
+        @include bigger-text;
+        font-weight: normal;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        width: 178px;
+        margin: 0 auto;
+    }
+}
+
+.social-item {
+    &__link {
+        font-size: 0;
+        svg {
+            height: 28px;
+            fill: $light;
+        }
+    }
+}
+
+.footer-nav {
+    margin-bottom: 44px;
+    @include bigger-text;
+    &__item {
+        margin-bottom: 8px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.footer-due {
+    margin-bottom: 50px;
+    &__title {
+        margin-bottom: 14px;
+        @include bigger-text;
+        font-weight: normal;
+    }
+    &__text {
+        margin-bottom: 8px;
+        @include standart-text;
+        span {
+            padding-left: 12px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .footer {
+        text-align: left;
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    .social {
+        margin-bottom: 0;
+    }
+    .social__list {
+        margin: 0;
+        width: 142px;
+    }
+    .footer-nav {
+        justify-self: center;
+        margin-bottom: 0;
+    }
+    .footer-due {
+        justify-self: end;
+        margin-bottom: 30px;
+        &__text{
+            &:last-child {
+                span {
+                    padding-left: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $tablet-big-width) {
+    .footer {
+        padding: 38px 0 20px;
+    }
+    .social__title,
+    .footer-due__title {
+        margin-bottom: 20px;
+        @include title;
+    }
+    .social__list {
+        width: 210px;
+        svg {
+            width: 35px;
+            height: 35px;
+        }
+    }
+    .footer-nav {
+        padding-top: 4px;
+        @include subtitle;
+        &__item {
+            margin-bottom: 8px;
+        }
+    }
+    .footer-due__text {
+        @include bigger-text;
+    }
+}
