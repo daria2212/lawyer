@@ -22,9 +22,11 @@
     "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^4.0.1",
     "sass": "^1.26.3",
-    "uglify": "^0.1.5"
+    "uglify": "^0.1.5",
+    "wow.js": "^1.2.2"
   },
   "dependencies": {
+    "animate.css": "^4.1.0",
     "del": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "normalize.css": "^8.0.1",
