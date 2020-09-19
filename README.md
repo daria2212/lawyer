@@ -1,7 +1,7 @@
-# 👨‍💼  Lawyer - website layout
+# 💐  Floristry - website layout
 
 It's a deploy branch
 
 ## Open website
 
-[Click here](https://dariathehuman.github.io/lawyer/)
+[Click here](https://dariathehuman.github.io/floristry/)
